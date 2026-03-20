@@ -1,0 +1,13 @@
+<div class="page-wrapper">
+  <div class="card">
+    <div class="card-header-bar"></div>
+    <div class="card-title">Result</div>
+    <app-form> </app-form>
+    <app-table [passengers]="passengers"></app-table>
+     <div class="actions-row">
+        <span>File >> <a [href]="downloadUrl" [download]="fileName">{{ fileName }}</a></span>
+      <button class="btn-back" (click)="onBack()">Cancel</button>
+      
+    </div>
+  </div>
+</div>

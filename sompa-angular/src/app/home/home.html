@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <div class="card">
+            <div class="card-header-bar"></div>
+            <div class="card-title">Initial Page</div>
+
+            <div class="form-row">
+
+                <!-- Flight No -->
+                <div class="field-group">
+                    <label class="field-label">Flight no <span class="required-star">*</span></label>
+                    <div class="field-col">
+                        <input type="text" class="input-text" [class.input-error]="errors.flightNo"
+                            [(ngModel)]="flightNo" (ngModelChange)="errors.flightNo = ''" />
+                        <span class="error-msg" *ngIf="errors.flightNo">{{ errors.flightNo }}</span>
+                    </div>
+                </div>
+
+                <!-- Excel File -->
+                <div class="file-group">
+                    <label class="">Excel file <span class="required-star">*</span></label>
+                    <div class="field-col" style="flex:1">
+                        <div class="file-input-wrapper">
+                            <div class="file-name-display" [class.has-file]="fileNameDisplay">
+                                {{ fileNameDisplay || 'No file selected' }}
+                            </div>
+
+                            <button class="btn-browse" type="button" (click)="fileInput.click()">Browse</button>
+                            <input type="file" #fileInput class="file-input-hidden" accept=".xlsx"
+                                (change)="onFileChange($event)" [value]="selectFile ? undefined : ''" />
+
+                        </div>
+                        <span class="error-msg" *ngIf="errors.file">{{ errors.file }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="server-errors" *ngIf="serverErrors.length > 0">
+                <span *ngFor="let err of serverErrors" class="error-msg">{{ err }}</span>
+            </div>
+
+            <div class="actions-row">
+                <button class="btn-save" (click)="onSave()">Save</button>
+                <button class="btn-cancel" (click)="onCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

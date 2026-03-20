@@ -1,0 +1,237 @@
+:host {
+  display: block; 
+}
+
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 32px 32px;
+  width: 100%;
+  max-width: 780px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 28px;
+  letter-spacing: 0.01em;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.field-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.field-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.required-star {
+  color: var(--red);
+  margin-left: 2px;
+}
+
+.input-text {
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 10px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.18s;
+  width: 120px;
+}
+
+.input-text:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px rgba(45, 143, 154, 0.15);
+}
+
+.file-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.file-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.file-name-display {
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 4px 0 0 4px;
+  padding: 0 12px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-right: none;
+}
+
+.file-name-display.has-file {
+  color: var(--text-dark);
+}
+
+.btn-browse {
+  height: 38px;
+  padding: 0 18px;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.18s;
+  letter-spacing: 0.01em;
+}
+
+.btn-browse:hover { background: var(--teal-hover); }
+.btn-browse:active { background: var(--teal-active); }
+
+.file-input-hidden {
+  display: none;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-save {
+  height: 38px;
+  padding: 0 28px;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+  letter-spacing: 0.01em;
+}
+
+.btn-save:hover { background: var(--teal-hover); }
+.btn-save:active { background: var(--teal-active); }
+
+.btn-cancel {
+  height: 38px;
+  padding: 0 24px;
+  background: var(--cancel-bg);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+  letter-spacing: 0.01em;
+}
+
+.btn-cancel:hover { background: var(--cancel-hover); }
+
+.input-error {
+  border: 1px solid red !important;
+  background-color: #fff0f0;
+}
+
+
+ .field-col {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 4px; 
+}
+
+/* ข้อความ Error ใต้ Input */
+.error-msg {
+    color: #cc0000;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+
+.server-error-msg {
+    color: #cc0000;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0 0 20px 0; 
+    white-space: pre-line;
+}
+
+
+.card.card-error {
+    border: 1px solid #cc0000;
+}
+
+
+.file-name-display.input-error {
+    border: 1px solid red;
+    border-right: none; 
+}
+
+.server-errors {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border: 1px solid #cc0000;
+  border-radius: 4px;
+  background-color: #fff5f5;
+}
+
+.server-errors .error-msg {
+  color: #cc0000;
+  font-size: 0.85rem;
+  font-weight: 600;
+}

@@ -1,0 +1,44 @@
+<div class="form-row">
+      <div class="field-group">
+        <label class="field-label">First name <span class="required-star">*</span></label>
+        <input type="text" class="input-text" />
+      </div>
+      <div class="field-group">
+        <label class="field-label">Last name <span class="required-star">*</span></label>
+        <input type="text" class="input-text" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field-group">
+        <label class="field-label">Gender <span class="required-star">*</span></label>
+        <select class="input-select">
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Unknown">Unknown</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label class="field-label">Date of birth <span class="required-star">*</span></label>
+        <input type="date" class="input-text" [max]="today"/>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field-group">
+        <label class="field-label">Nationality <span class="required-star">*</span></label>
+        <input type="text" class="input-text" />
+      </div>
+       <div class="field-group">
+        
+      </div>
+    </div>
+
+    <div class="actions-row">
+      <div></div>
+      <div class="btn-group">
+        <button class="btn-save" disabled>Save</button>
+        <button class="btn-clear" disabled>Clear</button>
+      </div>
+    </div>
